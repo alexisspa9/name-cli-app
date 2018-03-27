@@ -7,8 +7,10 @@ class ParosPages::accomodation
 	def self.scrape_accommodation
 		accommodations - []
 		
-
-		accommodations
+		accommodations << self.scrape_parospages
+		accommodations 
 	end
-
+	def self.scrape_parospages
+		doc = Nokogiri::HTML(open("https://www.parospages.com/en/accommodations"))
+	end
 end
