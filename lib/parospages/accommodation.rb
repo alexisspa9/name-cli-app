@@ -1,10 +1,14 @@
 class ParosPages::accomodation
 	attr_accessor :name, :url, :type
-	def  self.test
-		accomodation_one = self.new
-		accomodation_one.name = 'Armenistis'
-		accomodation_one.url = "google.com"
-		accomodation_one.type = "villa "
+	def  self.show
+		self.scrape_accommodation
+	end
+
+	def self.scrape_accommodation
+		accommodations - []
+		
+
+		accommodations
 	end
 
 end
