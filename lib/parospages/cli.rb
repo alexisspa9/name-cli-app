@@ -1,12 +1,12 @@
 class Parospages::CLI
 	def call
 		puts "Recommended accommodation in Paros Island "	
-		show_list
+		list
 		menu
 		goodbye
 	end
-	def show_list
-		@accommodations = ParosPages::accommodation.show
+	def list
+		@accommodations = Parospages::Accommodation.show
 		@accommodations.each.with_index(1) do |acco, i|
 			puts "#{i}. #{acco.name} - #{acco.type}"
 		end
@@ -20,9 +20,9 @@ class Parospages::CLI
 				the_accommo = @accommodations[input.to_i - 1]
 				puts "#{the_accommo.name} - #{the_accommo.type}"
 			elsif input == list
-				show_list
+				list
 			else
-				puts "Not sure what you meean type list or exit:"
+				puts "Not sure what you mean type list or exit:"
 			end
 		end
 	end
