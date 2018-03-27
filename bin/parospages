@@ -1,3 +1,5 @@
 #!/usr/bin/env ruby
 
-puts "Hello world!"
+require './lib/parospages'
+
+Parospages::CLI.new.call

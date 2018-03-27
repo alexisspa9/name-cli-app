@@ -1,5 +1,2 @@
-require "parospages/version"
-
-module Parospages
-  # Your code goes here...
-end
+require_relative "./parospages/version"
+require_relative "./parospages/cli"
